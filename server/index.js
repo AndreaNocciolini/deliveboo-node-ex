@@ -30,6 +30,23 @@ app.get('/api', (req, res) => {
           });
 });
 
+
+app.get('/api/:id', (req, res) => {
+    con.query(`SELECT * FROM users WHERE id = ${req.params.id}`, function (err, result, fields) {
+            if (err) throw err;
+            console.log(result)
+            res.json({ result: result });
+          });
+});
+
+app.get('/api/:id/dishes', (req, res) => {
+    con.query(`SELECT * FROM dishes WHERE user_id = ${req.params.id}`, function (err, result, fields) {
+            if (err) throw err;
+            console.log(result)
+            res.json({ result: result });
+          });
+});
+
 app.listen(PORT, function () {
     console.log("Server listening on ".concat(PORT));
 });

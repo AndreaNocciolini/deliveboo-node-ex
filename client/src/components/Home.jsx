@@ -53,7 +53,7 @@ function Home() {
                                 the card's content. (Restaurant Description)
                             </Card.Text>
                             <Button variant="primary">
-                                <Link to="/show">Show</Link>
+                                <Link to="/show" state={{id: user.id}}>Show</Link>
                             </Button>
                         </Card.Body>
                     </Card>
