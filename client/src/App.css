@@ -17,7 +17,7 @@
   .My-logo {
     stroke-dasharray: 50;
     stroke-dashoffset: 0;
-    animation: load 12s linear infinite;
+    animation: load 11s linear infinite;
     transform-origin: center;
   }
 

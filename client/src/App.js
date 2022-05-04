@@ -4,6 +4,7 @@ import './App.css';
 // import components
 import Home from "./components/Home";
 import About from "./components/About";
+import Show from "./components/Show";
 
 import {
   BrowserRouter as Router, //<BrowserRouter> will be <Router>
@@ -23,11 +24,18 @@ function App() {
           xmlns="<http://www.w3.org/2000/svg>"
           width="20%"
         >
+          <defs>
+            <linearGradient id="myGradient">
+              <stop offset="0%" stop-color="green" />
+              <stop offset="100%" stop-color="white" />
+            </linearGradient>
+          </defs>
           <circle
             cx="12" cy="12" r="8"
-            strokeWidth="4" stroke="tomato"
+            strokeWidth="4" stroke="url(#myGradient)"
             fill="none"
           />
+
 
         </svg>
         <p>DeliveBoo</p>
@@ -41,7 +49,9 @@ function App() {
             <Route exact path="/" element={<Home />} />
 
             <Route path="/about" element={<About />} />
-            
+
+            <Route path="/show" element={<Show />} />
+
           </Routes>
         </Router>
       </main>

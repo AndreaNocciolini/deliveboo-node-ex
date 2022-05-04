@@ -25,7 +25,7 @@ function Home() {
     //change page
     function paginate(pageNumber) {
         return setCurrentPage(pageNumber);
-    }  
+    }
 
     return (
         <div>
@@ -52,13 +52,15 @@ function Home() {
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content. (Restaurant Description)
                             </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
+                            <Button variant="primary">
+                                <Link to="/show">Show</Link>
+                            </Button>
                         </Card.Body>
                     </Card>
                 </Col>
             })}</Row>
 
-            {data ? (<Pagination usersPerPage={usersPerPage} totalUsers={data.length} paginate={paginate}/>) : "Loading..."}
+            {data ? (<Pagination usersPerPage={usersPerPage} totalUsers={data.length} paginate={paginate} />) : "Loading..."}
         </div>
     );
 }
