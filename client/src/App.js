@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import logo from './logo.svg';
 import './App.css';
 
 // import components
@@ -15,18 +14,9 @@ import {
 
 function App() {
 
-  const [data, setData] = useState(null);
-
-  React.useEffect(() => {
-    fetch("http://localhost:3001/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
-
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <svg
           className="My-logo"
           viewBox="0 0 24 24"
@@ -40,7 +30,7 @@ function App() {
           />
 
         </svg>
-        <p>{!data ? "Loading..." : data}</p>
+        <p>DeliveBoo</p>
 
       </header>
 
@@ -51,8 +41,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
 
             <Route path="/about" element={<About />} />
-
-            {/* <Navigate to="/" /> */}
+            
           </Routes>
         </Router>
       </main>
