@@ -25,7 +25,6 @@ app.use(cors());
 app.get('/api', (req, res) => {
   con.query("SELECT * FROM users", function (err, result, fields) {
     if (err) throw err;
-    console.log(result)
     res.json({ result: result });
   });
 });

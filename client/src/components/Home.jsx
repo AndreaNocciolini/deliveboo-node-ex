@@ -52,8 +52,8 @@ function Home() {
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content. (Restaurant Description)
                             </Card.Text>
-                            <Button variant="primary">
-                                <Link to="/show" state={{id: user.id}}>Show</Link>
+                            <Button variant="primary" className={'btn-success p-1'}>
+                                <Link to="/show" state={{id: user.id}} className={'text-decoration-none text-white p-2'}>Show</Link>
                             </Button>
                         </Card.Body>
                     </Card>
